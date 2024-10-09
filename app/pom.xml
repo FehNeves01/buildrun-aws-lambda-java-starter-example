@@ -2,10 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>tech.buildrun</groupId>
-    <artifactId>aws-lambda-java-starter-example</artifactId>
+    <artifactId>
+        pdf-to-image
+    </artifactId>
     <packaging>jar</packaging>
     <version>0.0.1</version>
-    <name>aws-lambda-java-starter-example</name>
+    <name>pdf-to-image</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
@@ -31,7 +33,7 @@
         </dependency>
         <!-- AWS LAMBDA -->
 
-        <!-- JACKSON -->
+
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
@@ -57,9 +59,8 @@
             <artifactId>jackson-annotations</artifactId>
             <version>${jackson.version}</version>
         </dependency>
-        <!-- JACKSON -->
 
-        <!-- UNIT TESTS -->
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -78,7 +79,47 @@
             <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- UNIT TESTS -->
+
+
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.29</version>
+        </dependency>
+
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>s3</artifactId>
+            <version>2.20.0</version> <!-- Verifique a versão mais recente -->
+        </dependency>
+
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>apache-client</artifactId>
+
+
+            <version>2.20.0</version> <!-- Verifique a versão mais recente -->
+        </dependency>
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+
+            <artifactId>s3</artifactId>
+
+            <version>2.20.0</version> <!-- Verifique a versão mais recente -->
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version> <!-- Verifique a versão mais recente -->
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+
 
     </dependencies>
 
